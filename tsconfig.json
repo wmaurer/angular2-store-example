@@ -13,7 +13,6 @@
     "typings/custom/normalizr.d.ts",
     "src/main.ts",
     "src/vendor.ts",
-    "src/app/models/users.ts",
     "node_modules/immutable/dist/immutable.d.ts"
   ],
   "filesGlob": [

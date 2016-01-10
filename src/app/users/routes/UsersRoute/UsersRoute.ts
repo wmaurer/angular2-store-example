@@ -9,7 +9,7 @@ import { Users } from '../../models/users';
   selector: 'UsersRoute',
   template: require('./UsersRoute.html'),
   directives: [ ROUTER_DIRECTIVES ],
-  providers: [Users]
+  providers: [ Users ]
 })
 @RouteConfig([
   {
