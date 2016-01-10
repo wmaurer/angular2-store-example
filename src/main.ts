@@ -7,8 +7,7 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 import {HTTP_PROVIDERS} from 'angular2/http';
 
 import {provideStore} from '@ngrx/store';
-import {Users} from './app/models/users';
-import {users} from './app/reducers/users';
+import * as reducers from './app/reducers/index';
 import {API_PROVIDERS} from './app/modules/api';
 
 /*
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
     provide(LocationStrategy, { useClass: HashLocationStrategy }),
-    provideStore({ users }),
+    provideStore(reducers),
     API_PROVIDERS
   ])
   .catch(err => console.error(err));

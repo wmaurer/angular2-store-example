@@ -4,15 +4,17 @@ import { normalize, arrayOf, Schema } from 'normalizr';
 
 import { IUser, IUsers, userSchema, UserRecord } from '../models/users';
 
-export const LOADING_USERS = 'LOADING_USERS';
-export const LOADED_USERS = 'LOADED_USERS';
-export const LOADING_USER = 'LOADING_USER';
-export const LOADED_USER = 'LOADED_USER';
-export const ADDING_USER = 'ADDING_USER';
-export const ADDED_USER = 'ADDED_USER';
-export const DELETING_USER = 'DELETING_USER';
-export const DELETED_USER = 'DELETED_USER';
-export const PATCHED_USER = 'PATCHED_USER';
+import {
+  LOADING_USERS,
+  LOADED_USERS,
+  LOADING_USER,
+  LOADED_USER,
+  ADDING_USER,
+  ADDED_USER,
+  DELETING_USER,
+  DELETED_USER,
+  PATCHED_USER
+} from '../models/users';
 
 var initialState: IUsers = fromJS({
   result: [],
@@ -20,8 +22,7 @@ var initialState: IUsers = fromJS({
     users: {}
   },
   adding: false,
-  loading: false,
-  currentDetailId: null
+  loading: false
 });
 
 export const users: Reducer<any> = (state = initialState, action: Action) => {
