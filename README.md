@@ -10,7 +10,7 @@
 
 ```bash
 # clone the repo
-git clone git@github.com:meenie/angular2-store-example.git
+git clone git@github.com:ngrx/angular2-store-example.git
 
 # change directory to our repo
 cd angular2-store-example
